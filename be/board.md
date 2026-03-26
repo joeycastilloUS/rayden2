@@ -7,7 +7,6 @@ Source: plan-birthday-site.html → estimate-birthday-site.html
 ## Board 1 — Rayden's Birthday Site (19 pts)
 
 ### Ready
-- {invite page — hero + details + countdown + footer, add to, site} · 5 · ~A
 - {RSVP form + Google Sheets backend, add to, site} · 5 · ~A
 - {GitHub repo + Cloudflare Pages deploy, add to, site} · 3 · ~A
 - {Facebook share image 1200x630, add to, site} · 3 · ~A
@@ -16,3 +15,4 @@ Source: plan-birthday-site.html → estimate-birthday-site.html
 ### In Progress
 
 ### Done
+- {invite page — hero + details + countdown + footer, add to, site} · 5 · ~A ✅
