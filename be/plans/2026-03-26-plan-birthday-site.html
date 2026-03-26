@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan: Birthday Party Website — Turning 2, April 6 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #111111; color: #ccc; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; }
+  nav { position: sticky; top: 0; background: #000; border-bottom: 2px solid #6FC3DF; padding: 12px 24px; z-index: 100; }
+  nav .brand { color: #6FC3DF; font-weight: 700; font-size: 1.2rem; }
+  nav .nav-sub { color: #666; font-size: 0.85rem; margin-left: 12px; }
+  .container { max-width: 800px; margin: 0 auto; padding: 32px 24px; }
+  h1 { color: #6FC3DF; font-size: 1.8rem; margin-bottom: 8px; }
+  h2 { color: #6FC3DF; font-size: 1.3rem; margin: 32px 0 12px; border-bottom: 1px solid #333; padding-bottom: 6px; }
+  h3 { color: #ddd; font-size: 1.05rem; margin: 20px 0 8px; }
+  .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 32px; }
+  .status-banner { background: #1a2a1a; border: 1px solid #3a5a3a; border-radius: 8px; padding: 12px 20px; margin-bottom: 32px; color: #6fdf6f; font-weight: 600; text-align: center; }
+  .card { background: #1A1A1A; border-radius: 8px; padding: 20px; margin: 16px 0; }
+  .card-label { color: #6FC3DF; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+  p, li { color: #bbb; font-size: 0.95rem; }
+  ul, ol { padding-left: 20px; margin: 8px 0; }
+  li { margin: 6px 0; }
+  strong { color: #ddd; }
+  code { background: #222; color: #6FC3DF; padding: 2px 6px; border-radius: 3px; font-size: 0.85rem; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th { text-align: left; color: #6FC3DF; padding: 8px 12px; border-bottom: 1px solid #333; font-size: 0.85rem; }
+  td { padding: 8px 12px; border-bottom: 1px solid #222; vertical-align: top; }
+  .highlight { background: #1a2a2a; border: 1px solid #2a4a4a; border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+  .highlight-label { color: #6FC3DF; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .countdown { color: #df6f6f; font-weight: 600; }
+  .footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #222; color: #555; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<nav>
+  <span class="brand">Be</span>
+  <span class="nav-sub">Plan</span>
+</nav>
+
+<div class="container">
+
+<h1>Plan: Birthday Party Website</h1>
+<p class="subtitle">Turning 2 &middot; April 6, 2026 &middot; Mountain View, Pampanga &middot; <span class="countdown">11 days away</span></p>
+
+<div class="status-banner">Plan &mdash; Awaiting Approval</div>
+
+<h2>Intent</h2>
+
+<div class="card">
+  <p>Build a birthday party invite site that Joey can share on Facebook and TikTok. Guests see the invite, get the details, and RSVP. Mobile-first &mdash; most guests in the Philippines are on their phones. Has to look good enough to screenshot and share. The link IS the invite.</p>
+</div>
+
+<h2>What You Need</h2>
+
+<div class="card">
+  <div class="card-label">The Deliverables</div>
+  <table>
+    <tr><th>#</th><th>What</th><th>Why</th></tr>
+    <tr>
+      <td>1</td>
+      <td><strong>Invite Website</strong></td>
+      <td>Single page: hero with the kid's name + "Turning 2!", party details (date, time, location), fun theme, RSVP form, countdown timer. Deployed to a shareable URL.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><strong>RSVP System</strong></td>
+      <td>Guests submit name + how many are coming. Responses go to a Google Sheet so Joey and family can see the headcount. No login needed.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><strong>Facebook Post Asset</strong></td>
+      <td>An image (1200x630) designed to match the site &mdash; the kid's name, "Turning 2!", date, and the link. Shareable as a post or story.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><strong>TikTok / Reels Asset</strong></td>
+      <td>A vertical image or simple animated HTML (1080x1920) that can be screen-recorded or exported &mdash; same design, vertical format, with the invite link.</td>
+    </tr>
+  </table>
+</div>
+
+<h2>Scope</h2>
+
+<div class="card">
+  <div class="card-label">The Website &mdash; One Page, Five Sections</div>
+  <ol>
+    <li><strong>Hero</strong> &mdash; Big name, "is Turning 2!", date. Fun colors, balloons or confetti animation (CSS only, no libraries). Optional: photo of the birthday boy.</li>
+    <li><strong>Details</strong> &mdash; When (April 6, 2026 &mdash; time TBD), Where (Mountain View, Pampanga &mdash; with Google Maps link), What to expect (food, games, fun).</li>
+    <li><strong>Countdown</strong> &mdash; Live countdown timer to party day. Days, hours, minutes, seconds. Vanilla JS.</li>
+    <li><strong>RSVP</strong> &mdash; Simple form: Name, Number of Guests, optional Message. Submit goes to Google Sheets via Google Apps Script (free, no backend needed, no server).</li>
+    <li><strong>Footer</strong> &mdash; "Made with love by Dad" or similar.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <div class="card-label">Theme Direction</div>
+  <p>Need your input on theme. Some options:</p>
+  <ul>
+    <li><strong>Classic birthday</strong> &mdash; bright colors, balloons, confetti, playful fonts</li>
+    <li><strong>Character theme</strong> &mdash; if the kid has a favorite (Cocomelon, Paw Patrol, cars, dinosaurs, etc.)</li>
+    <li><strong>Minimalist fun</strong> &mdash; clean white background, big typography, one accent color, subtle animations</li>
+    <li><strong>Filipino fiesta</strong> &mdash; warm colors, festive, parol-inspired accents</li>
+  </ul>
+  <p>Tell me the kid's name and any theme preference and I'll build it.</p>
+</div>
+
+<h2>Approach</h2>
+
+<div class="card">
+  <div class="card-label">Tech Stack</div>
+  <table>
+    <tr><th>Layer</th><th>Choice</th><th>Why</th></tr>
+    <tr>
+      <td>Frontend</td>
+      <td>Vanilla HTML/CSS/JS</td>
+      <td>Pure metal. No React, no framework. One <code>index.html</code>. Mobile-first responsive.</td>
+    </tr>
+    <tr>
+      <td>RSVP Backend</td>
+      <td>Google Apps Script + Google Sheets</td>
+      <td>Free. No server to maintain. POST from the form, data lands in a spreadsheet Joey can check on his phone. Proven pattern &mdash; works perfectly for event RSVPs.</td>
+    </tr>
+    <tr>
+      <td>Hosting</td>
+      <td>Cloudflare Pages</td>
+      <td>Joey already has Cloudflare via metal. Push to GitHub, auto-deploys. Free SSL, fast CDN (important &mdash; Philippine guests need low latency).</td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td>Option A: subdomain of joeycastillo.us<br>Option B: fun free domain<br>Option C: just the Cloudflare Pages URL</td>
+      <td>Your call. A custom subdomain like <code>party.joeycastillo.us</code> is easy if you want it.</td>
+    </tr>
+    <tr>
+      <td>Social Assets</td>
+      <td>HTML pages rendered to screenshot/screen-record</td>
+      <td>Build the FB and TikTok assets as HTML pages, open in browser, screenshot. Same design system, pixel-perfect, no Photoshop needed.</td>
+    </tr>
+  </table>
+</div>
+
+<div class="card">
+  <div class="card-label">RSVP Flow</div>
+  <ol>
+    <li>Guest opens site on phone (from FB/TikTok link)</li>
+    <li>Scrolls to RSVP section</li>
+    <li>Fills in: Name, Number of Guests, Message (optional)</li>
+    <li>Taps "I'm Coming!"</li>
+    <li>JS sends POST to Google Apps Script web app URL</li>
+    <li>Apps Script appends row to Google Sheet: [timestamp, name, guests, message]</li>
+    <li>Guest sees "See you there!" confirmation</li>
+    <li>Joey checks the Google Sheet anytime for headcount</li>
+  </ol>
+</div>
+
+<h2>Phases</h2>
+
+<div class="card">
+  <table>
+    <tr><th>Phase</th><th>What</th><th>When</th></tr>
+    <tr>
+      <td>1</td>
+      <td><strong>Build site + RSVP</strong> &mdash; index.html with all 5 sections, Google Sheet + Apps Script, deploy to Cloudflare Pages</td>
+      <td>Today</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><strong>Social assets</strong> &mdash; FB image (1200x630), TikTok vertical (1080x1920), both as HTML pages for screenshot</td>
+      <td>Today</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><strong>Share</strong> &mdash; Post on FB + TikTok with the link. Done.</td>
+      <td>Whenever you're ready</td>
+    </tr>
+  </table>
+</div>
+
+<h2>What I Need From You</h2>
+
+<div class="highlight">
+  <div class="highlight-label">Before I Build</div>
+  <ol>
+    <li><strong>Kid's name</strong> &mdash; the star of the show</li>
+    <li><strong>Party time</strong> &mdash; what time does it start? (e.g., 3:00 PM)</li>
+    <li><strong>Theme preference</strong> &mdash; character, color, vibe? Or "surprise me"</li>
+    <li><strong>Photo</strong> &mdash; want to include a photo of the birthday boy? Drop a file path if yes</li>
+    <li><strong>Domain</strong> &mdash; <code>party.joeycastillo.us</code>, or just the Cloudflare Pages URL?</li>
+    <li><strong>Google account</strong> &mdash; which email for the RSVP Google Sheet?</li>
+  </ol>
+</div>
+
+<h2>Constraints</h2>
+
+<div class="card">
+  <ul>
+    <li><strong>11 days out.</strong> Invites should go out ASAP so people can plan.</li>
+    <li><strong>Mobile-first.</strong> 90%+ of Philippine social media usage is mobile. Everything must look perfect on a phone screen.</li>
+    <li><strong>Fast loading.</strong> Philippine mobile networks vary. No heavy images, no frameworks, no CDN fonts. Inline everything.</li>
+    <li><strong>Tagalog + English.</strong> Most guests will be Filipino. Keep text bilingual or casual English that everyone understands.</li>
+    <li><strong>No frameworks.</strong> Pure metal. One HTML file, inline CSS, inline JS. Deploy and forget.</li>
+    <li><strong>Google Sheets RSVP.</strong> Free, no server, Joey can check on his phone. The simplest backend that works.</li>
+  </ul>
+</div>
+
+<div class="footer">Generated 2026-03-26 17:50</div>
+</div>
+</body>
+</html>
