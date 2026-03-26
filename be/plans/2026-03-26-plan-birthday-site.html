@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plan: Birthday Party Website — Turning 2, April 6 2026</title>
+<title>Plan: Rayden's 2nd Birthday — April 6 2026, Mountain View Pampanga</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: #111111; color: #ccc; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; }
@@ -40,15 +40,15 @@
 
 <div class="container">
 
-<h1>Plan: Birthday Party Website</h1>
-<p class="subtitle">Turning 2 &middot; April 6, 2026 &middot; Mountain View, Pampanga &middot; <span class="countdown">11 days away</span></p>
+<h1>Plan: Rayden's 2nd Birthday</h1>
+<p class="subtitle">Rayden is Turning 2! &middot; April 6, 2026 &middot; Mountain View, Pampanga &middot; <span class="countdown">11 days away</span><br>From Mom (Ella) &amp; Dad (Joey)</p>
 
 <div class="status-banner">Plan &mdash; Awaiting Approval</div>
 
 <h2>Intent</h2>
 
 <div class="card">
-  <p>Build a birthday party invite site that Joey can share on Facebook and TikTok. Guests see the invite, get the details, and RSVP. Mobile-first &mdash; most guests in the Philippines are on their phones. Has to look good enough to screenshot and share. The link IS the invite.</p>
+  <p>Build a birthday party invite site for <strong>Rayden's 2nd birthday</strong> that Ella and Joey can share on Facebook and TikTok. Guests see the invite, get the details, and RSVP. Mobile-first &mdash; most guests in the Philippines are on their phones. Has to look good enough to screenshot and share. The link IS the invite. This is from Mom &mdash; Ella's hosting, Ella's posting, Ella's party.</p>
 </div>
 
 <h2>What You Need</h2>
@@ -60,7 +60,7 @@
     <tr>
       <td>1</td>
       <td><strong>Invite Website</strong></td>
-      <td>Single page: hero with the kid's name + "Turning 2!", party details (date, time, location), fun theme, RSVP form, countdown timer. Deployed to a shareable URL.</td>
+      <td>Single page: hero with <strong>Rayden</strong> + "is Turning 2!", party details (date, time, location), fun theme, RSVP form, countdown timer. Deployed to a shareable URL.</td>
     </tr>
     <tr>
       <td>2</td>
@@ -70,7 +70,7 @@
     <tr>
       <td>3</td>
       <td><strong>Facebook Post Asset</strong></td>
-      <td>An image (1200x630) designed to match the site &mdash; the kid's name, "Turning 2!", date, and the link. Shareable as a post or story.</td>
+      <td>An image (1200x630) designed to match the site &mdash; "Rayden is Turning 2!", date, and the link. Shareable as a post or story. Ella posts this.</td>
     </tr>
     <tr>
       <td>4</td>
@@ -85,11 +85,11 @@
 <div class="card">
   <div class="card-label">The Website &mdash; One Page, Five Sections</div>
   <ol>
-    <li><strong>Hero</strong> &mdash; Big name, "is Turning 2!", date. Fun colors, balloons or confetti animation (CSS only, no libraries). Optional: photo of the birthday boy.</li>
+    <li><strong>Hero</strong> &mdash; Big "RAYDEN" + "is Turning 2!", date. Fun colors, balloons or confetti animation (CSS only, no libraries). Optional: photo of Rayden.</li>
     <li><strong>Details</strong> &mdash; When (April 6, 2026 &mdash; time TBD), Where (Mountain View, Pampanga &mdash; with Google Maps link), What to expect (food, games, fun).</li>
     <li><strong>Countdown</strong> &mdash; Live countdown timer to party day. Days, hours, minutes, seconds. Vanilla JS.</li>
     <li><strong>RSVP</strong> &mdash; Simple form: Name, Number of Guests, optional Message. Submit goes to Google Sheets via Google Apps Script (free, no backend needed, no server).</li>
-    <li><strong>Footer</strong> &mdash; "Made with love by Dad" or similar.</li>
+    <li><strong>Footer</strong> &mdash; "With love, Mommy Ella &amp; Daddy Joey" or similar.</li>
   </ol>
 </div>
 
@@ -98,11 +98,11 @@
   <p>Need your input on theme. Some options:</p>
   <ul>
     <li><strong>Classic birthday</strong> &mdash; bright colors, balloons, confetti, playful fonts</li>
-    <li><strong>Character theme</strong> &mdash; if the kid has a favorite (Cocomelon, Paw Patrol, cars, dinosaurs, etc.)</li>
+    <li><strong>Character theme</strong> &mdash; if Rayden has a favorite (Cocomelon, Paw Patrol, cars, dinosaurs, etc.)</li>
     <li><strong>Minimalist fun</strong> &mdash; clean white background, big typography, one accent color, subtle animations</li>
     <li><strong>Filipino fiesta</strong> &mdash; warm colors, festive, parol-inspired accents</li>
   </ul>
-  <p>Tell me the kid's name and any theme preference and I'll build it.</p>
+  <p>Ella &mdash; what's Rayden into? Pick a theme or say "surprise me" and I'll run with it.</p>
 </div>
 
 <h2>Approach</h2>
@@ -124,7 +124,7 @@
     <tr>
       <td>Hosting</td>
       <td>Cloudflare Pages</td>
-      <td>Joey already has Cloudflare via metal. Push to GitHub, auto-deploys. Free SSL, fast CDN (important &mdash; Philippine guests need low latency).</td>
+      <td>Joey already has Cloudflare. Push to GitHub, auto-deploys. Free SSL, fast CDN (important &mdash; Philippine guests need low latency).</td>
     </tr>
     <tr>
       <td>Domain</td>
@@ -149,7 +149,7 @@
     <li>JS sends POST to Google Apps Script web app URL</li>
     <li>Apps Script appends row to Google Sheet: [timestamp, name, guests, message]</li>
     <li>Guest sees "See you there!" confirmation</li>
-    <li>Joey checks the Google Sheet anytime for headcount</li>
+    <li>Ella checks the Google Sheet anytime for headcount</li>
   </ol>
 </div>
 
@@ -179,14 +179,25 @@
 <h2>What I Need From You</h2>
 
 <div class="highlight">
-  <div class="highlight-label">Before I Build</div>
+  <div class="highlight-label">What We Know</div>
+  <ul>
+    <li><strong>Name:</strong> Rayden</li>
+    <li><strong>Age:</strong> Turning 2</li>
+    <li><strong>Date:</strong> April 6, 2026</li>
+    <li><strong>Location:</strong> Home in Mountain View, Pampanga</li>
+    <li><strong>From:</strong> Mom (Ella) &amp; Dad (Joey)</li>
+    <li><strong>Sharing:</strong> Facebook + TikTok</li>
+  </ul>
+</div>
+
+<div class="highlight">
+  <div class="highlight-label">Still Need</div>
   <ol>
-    <li><strong>Kid's name</strong> &mdash; the star of the show</li>
     <li><strong>Party time</strong> &mdash; what time does it start? (e.g., 3:00 PM)</li>
     <li><strong>Theme preference</strong> &mdash; character, color, vibe? Or "surprise me"</li>
-    <li><strong>Photo</strong> &mdash; want to include a photo of the birthday boy? Drop a file path if yes</li>
-    <li><strong>Domain</strong> &mdash; <code>party.joeycastillo.us</code>, or just the Cloudflare Pages URL?</li>
-    <li><strong>Google account</strong> &mdash; which email for the RSVP Google Sheet?</li>
+    <li><strong>Photo of Rayden</strong> &mdash; want to include one? Drop a file path if yes</li>
+    <li><strong>Domain</strong> &mdash; custom subdomain or just the Cloudflare Pages URL?</li>
+    <li><strong>Google account</strong> &mdash; Ella's email for the RSVP Google Sheet?</li>
   </ol>
 </div>
 
