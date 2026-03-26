@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<title>FB Share — Rayden is Turning 2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFE8F0 50%, #E8F0FF 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  /* Decorative circles */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.12;
+  }
+  .c1 { width: 300px; height: 300px; background: #FF6B9D; top: -80px; left: -60px; }
+  .c2 { width: 200px; height: 200px; background: #6BC5F8; bottom: -50px; right: -30px; }
+  .c3 { width: 150px; height: 150px; background: #FFD93D; top: 40px; right: 120px; }
+  .c4 { width: 100px; height: 100px; background: #6BCB77; bottom: 60px; left: 100px; }
+  .c5 { width: 180px; height: 180px; background: #C084FC; bottom: -40px; left: 400px; }
+
+  /* Confetti dots */
+  .dot { position: absolute; border-radius: 50%; }
+  .d1  { width: 14px; height: 14px; background: #FF6B9D; top: 60px; left: 200px; }
+  .d2  { width: 10px; height: 10px; background: #FFD93D; top: 120px; right: 180px; }
+  .d3  { width: 12px; height: 12px; background: #6BC5F8; bottom: 100px; left: 300px; }
+  .d4  { width: 8px;  height: 8px;  background: #6BCB77; top: 80px; right: 350px; }
+  .d5  { width: 16px; height: 16px; background: #C084FC; bottom: 80px; right: 250px; }
+  .d6  { width: 10px; height: 10px; background: #FFA94D; top: 200px; left: 120px; }
+  .d7  { width: 12px; height: 12px; background: #FF6B9D; bottom: 150px; right: 100px; }
+  .d8  { width: 14px; height: 14px; background: #FFD93D; bottom: 50px; left: 600px; }
+
+  /* Confetti rectangles */
+  .rect { position: absolute; }
+  .r1 { width: 8px; height: 20px; background: #FF6B9D; top: 40px; left: 500px; transform: rotate(30deg); }
+  .r2 { width: 6px; height: 16px; background: #6BC5F8; top: 150px; left: 80px; transform: rotate(-20deg); }
+  .r3 { width: 10px; height: 14px; background: #FFD93D; bottom: 120px; right: 400px; transform: rotate(45deg); }
+  .r4 { width: 8px; height: 18px; background: #C084FC; top: 50px; right: 80px; transform: rotate(-35deg); }
+
+  .main {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .invited {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #7A6365;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    margin-bottom: 16px;
+  }
+
+  .name {
+    font-family: 'Fredoka', cursive;
+    font-size: 7rem;
+    font-weight: 700;
+    color: #FF6B9D;
+    line-height: 1;
+    margin-bottom: 4px;
+    text-shadow: 4px 4px 0 rgba(255,107,157,0.12);
+  }
+
+  .is-turning {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #7A6365;
+    margin-bottom: -10px;
+  }
+
+  .age {
+    font-family: 'Fredoka', cursive;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(135deg, #FFD93D, #FFA94D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(4px 4px 0 rgba(255,169,77,0.15));
+  }
+
+  .details {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #7A6365;
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  .url {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #6BC5F8;
+    margin-top: 12px;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+<div class="circle c4"></div>
+<div class="circle c5"></div>
+<div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div><div class="dot d4"></div>
+<div class="dot d5"></div><div class="dot d6"></div><div class="dot d7"></div><div class="dot d8"></div>
+<div class="rect r1"></div><div class="rect r2"></div><div class="rect r3"></div><div class="rect r4"></div>
+
+<div class="main">
+  <div class="invited">You're Invited!</div>
+  <div class="name">Rayden</div>
+  <div class="is-turning">is turning</div>
+  <div class="age">2!</div>
+  <div class="details">April 6, 2026 &bull; Mountain View, Pampanga</div>
+  <div class="url">RSVP at rayden2.pages.dev</div>
+</div>
+
+</body>
+</html>
