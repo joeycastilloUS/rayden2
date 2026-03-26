@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>TikTok — Rayden is Turning 2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #FFF8F0 0%, #FFE8F0 30%, #E8F0FF 70%, #FFF8F0 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  /* Decorative circles */
+  .circle { position: absolute; border-radius: 50%; opacity: 0.1; }
+  .c1 { width: 400px; height: 400px; background: #FF6B9D; top: -100px; left: -80px; }
+  .c2 { width: 350px; height: 350px; background: #6BC5F8; bottom: -80px; right: -60px; }
+  .c3 { width: 250px; height: 250px; background: #FFD93D; top: 300px; right: -40px; }
+  .c4 { width: 200px; height: 200px; background: #6BCB77; bottom: 300px; left: -40px; }
+  .c5 { width: 300px; height: 300px; background: #C084FC; top: 800px; left: 350px; opacity: 0.06; }
+
+  /* Confetti */
+  .dot { position: absolute; border-radius: 50%; }
+  .d1  { width: 20px; height: 20px; background: #FF6B9D; top: 150px; left: 120px; }
+  .d2  { width: 16px; height: 16px; background: #FFD93D; top: 250px; right: 150px; }
+  .d3  { width: 18px; height: 18px; background: #6BC5F8; top: 500px; left: 80px; }
+  .d4  { width: 14px; height: 14px; background: #6BCB77; bottom: 500px; right: 100px; }
+  .d5  { width: 22px; height: 22px; background: #C084FC; bottom: 350px; left: 200px; }
+  .d6  { width: 16px; height: 16px; background: #FFA94D; bottom: 600px; left: 800px; }
+  .d7  { width: 20px; height: 20px; background: #FF6B9D; bottom: 200px; right: 200px; }
+  .d8  { width: 14px; height: 14px; background: #FFD93D; top: 700px; left: 900px; }
+  .d9  { width: 18px; height: 18px; background: #6BC5F8; top: 400px; right: 80px; }
+  .d10 { width: 12px; height: 12px; background: #6BCB77; top: 100px; left: 800px; }
+
+  .rect { position: absolute; }
+  .r1 { width: 12px; height: 28px; background: #FF6B9D; top: 200px; left: 300px; transform: rotate(25deg); }
+  .r2 { width: 10px; height: 24px; background: #6BC5F8; bottom: 400px; right: 300px; transform: rotate(-30deg); }
+  .r3 { width: 14px; height: 20px; background: #FFD93D; top: 600px; left: 150px; transform: rotate(40deg); }
+  .r4 { width: 10px; height: 26px; background: #C084FC; bottom: 250px; left: 400px; transform: rotate(-15deg); }
+  .r5 { width: 12px; height: 22px; background: #FFA94D; top: 350px; right: 200px; transform: rotate(50deg); }
+
+  .main {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 60px;
+  }
+
+  .invited {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #7A6365;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: 40px;
+  }
+
+  .name {
+    font-family: 'Fredoka', cursive;
+    font-size: 10rem;
+    font-weight: 700;
+    color: #FF6B9D;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-shadow: 5px 5px 0 rgba(255,107,157,0.1);
+  }
+
+  .is-turning {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #7A6365;
+    margin-bottom: -10px;
+  }
+
+  .age {
+    font-family: 'Fredoka', cursive;
+    font-size: 16rem;
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(135deg, #FFD93D, #FFA94D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(5px 5px 0 rgba(255,169,77,0.15));
+    margin-bottom: 20px;
+  }
+
+  .stars {
+    font-size: 2.5rem;
+    margin: 30px 0;
+    color: #FFD93D;
+  }
+
+  .details {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #7A6365;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .location {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #9A8385;
+    margin-bottom: 40px;
+  }
+
+  .url-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px 40px;
+    display: inline-block;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .url-label {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #9A8385;
+    margin-bottom: 4px;
+  }
+  .url {
+    font-family: 'Fredoka', cursive;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #6BC5F8;
+  }
+
+  .from {
+    font-family: 'Fredoka', cursive;
+    font-size: 1.4rem;
+    color: #FF6B9D;
+    margin-top: 50px;
+  }
+</style>
+</head>
+<body>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+<div class="circle c4"></div>
+<div class="circle c5"></div>
+<div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div><div class="dot d4"></div>
+<div class="dot d5"></div><div class="dot d6"></div><div class="dot d7"></div><div class="dot d8"></div>
+<div class="dot d9"></div><div class="dot d10"></div>
+<div class="rect r1"></div><div class="rect r2"></div><div class="rect r3"></div><div class="rect r4"></div><div class="rect r5"></div>
+
+<div class="main">
+  <div class="invited">You're Invited!</div>
+  <div class="name">Rayden</div>
+  <div class="is-turning">is turning</div>
+  <div class="age">2!</div>
+  <div class="stars">&#10022; &#10022; &#10022;</div>
+  <div class="details">April 6, 2026</div>
+  <div class="location">Mountain View, Pampanga</div>
+  <div class="url-box">
+    <div class="url-label">RSVP at</div>
+    <div class="url">rayden2.pages.dev</div>
+  </div>
+  <div class="from">With love, Mommy Ella & Daddy Joey</div>
+</div>
+
+</body>
+</html>
